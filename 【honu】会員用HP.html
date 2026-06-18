@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>EIL beauty Honu｜モデル専用価格メニュー</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --pink: #F4C0D1;
+  --pink-d: #D4537E;
+  --pink-l: #FBEAF0;
+  --gold: #EF9F27;
+  --gold-l: #FAEEDA;
+  --teal: #1D9E75;
+  --teal-l: #E1F5EE;
+  --purple: #7F77DD;
+  --purple-l: #EEEDFE;
+  --text: #2C2C2A;
+  --sub: #888780;
+  --bg: #F9F6F3;
+  --card: #FFFFFF;
+  --border: rgba(0,0,0,0.07);
+}
+
+body {
+  font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(160deg, #FBEAF0 0%, #FEF3E8 60%, #E8F5EE 100%);
+  padding: 44px 20px 32px;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--pink-d);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.hero-name {
+  font-size: 13px;
+  color: var(--sub);
+  font-weight: 600;
+  letter-spacing: .08em;
+  margin-bottom: 6px;
+}
+.hero h1 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.hero h1 em { color: var(--pink-d); font-style: normal; }
+.hero-sub { font-size: 12px; color: var(--sub); margin-bottom: 20px; }
+.badge-off {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1.5px solid var(--pink);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pink-d);
+  margin-bottom: 22px;
+}
+
+/* LINE BOOK */
+.btn-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #06C755;
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 20px;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba(6,199,85,.3);
+}
+.warn-box {
+  margin-top: 10px;
+  background: #FFF8EC;
+  border: 1px solid #FAC775;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #7A4A00;
+  text-align: left;
+  line-height: 1.7;
+}
+.hp-note {
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--sub);
+  text-align: left;
+}
+.hp-note a { color: var(--pink-d); font-weight: 600; text-decoration: none; }
+
+/* ── SECTION ── */
+.sec { padding: 24px 16px; }
+.sec-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sec-title .ico {
+  width: 34px; height: 34px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+.divider { height: 8px; background: #EDE9E5; }
+
+/* ── EXPLAIN CARD ── */
+.exp-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.exp-head {
+  padding: 16px 16px 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.exp-ico {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.exp-title { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
+.exp-sub { font-size: 11px; color: var(--sub); }
+.illust { padding: 4px 16px 12px; }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 16px 14px;
+}
+.chip {
+  font-size: 11px; font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+.c-pink  { background: var(--pink-l); color: var(--pink-d); border-color: var(--pink); }
+.c-teal  { background: var(--teal-l); color: #0F6E56; border-color: #9FE1CB; }
+.c-pur   { background: var(--purple-l); color: #534AB7; border-color: #CECBF6; }
+.c-gold  { background: var(--gold-l); color: #7A4A00; border-color: #FAC775; }
+
+/* Compare bars */
+.compare-rows { padding: 0 16px 14px; }
+.compare-rows p.label { font-size: 11px; color: var(--sub); margin-bottom: 8px; }
+.cmp-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.cmp-lbl { font-size: 11px; color: var(--sub); width: 76px; flex-shrink: 0; }
+.cmp-track { flex: 1; height: 18px; background: #EDE9E5; border-radius: 6px; overflow: hidden; display: flex; align-items: center; }
+.cmp-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+.cmp-val { font-size: 11px; color: var(--sub); white-space: nowrap; }
+
+/* Steps */
+.steps { padding: 0 16px 14px; }
+.step { display: flex; gap: 12px; padding: 8px 0; position: relative; }
+.step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 17px; top: 38px; bottom: 0;
+  width: 2px; background: #EDE9E5;
+}
+.step-n {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+  flex-shrink: 0; position: relative; z-index: 1;
+}
+.step-n.s1 { background: var(--teal-l); color: #0F6E56; }
+.step-n.s2 { background: var(--purple-l); color: #534AB7; }
+.step-n.s3 { background: var(--pink-l); color: var(--pink-d); }
+.step-body h4 { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+.step-body p  { font-size: 12px; color: var(--sub); }
+
+/* ── PRICE TABLE ── */
+.price-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.price-head {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--sub);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: .5px solid var(--border);
+  gap: 8px;
+}
+.price-row:last-child { border-bottom: none; padding-bottom: 0; }
+.pname { flex: 1; font-size: 13px; line-height: 1.45; }
+.pcol  { text-align: right; flex-shrink: 0; }
+.pold  { font-size: 11px; color: var(--sub); text-decoration: line-through; white-space: nowrap; }
+.pnew  { font-size: 15px; font-weight: 700; color: var(--pink-d); white-space: nowrap; }
+.pfree { font-size: 13px; font-weight: 700; color: var(--teal); }
+.tag {
+  display: inline-block;
+  font-size: 10px; font-weight: 700;
+  padding: 2px 6px; border-radius: 5px;
+  margin-left: 4px; vertical-align: middle;
+}
+.tag-new  { background: var(--gold-l); color: #7A4A00; }
+.tag-pop  { background: var(--pink-l); color: var(--pink-d); }
+
+/* ── BODY PARTS ── */
+.body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.body-card {
+  background: var(--purple-l);
+  border: 1px solid #CECBF6;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.body-card h4 { font-size: 12px; font-weight: 700; color: #534AB7; margin-bottom: 4px; }
+.body-card .from { font-size: 10px; color: #534AB7; }
+.body-card .price { font-size: 17px; font-weight: 700; color: var(--pink-d); }
+.body-card .orig  { font-size: 10px; color: #534AB7; text-decoration: line-through; }
+
+/* ── EDIT BAR ── */
+.edit-bar { position: fixed; bottom: 16px; right: 16px; z-index: 999; }
+.edit-btn {
+  background: #2C2C2A; color: #fff; border: none;
+  border-radius: 50px; padding: 10px 18px;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+.edit-btn.on { background: var(--pink-d); }
+
+/* ── NAIL CARDS ── */
+.nail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.nail-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+/* カラーアクセントバー */
+.nail-accent { height: 6px; width: 100%; }
+
+/* 画像スロット（nail card内） */
+.nail-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #F0EDE9;
+  overflow: hidden;
+}
+.nail-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.nail-img.empty {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 4px;
+}
+.nail-img.empty .si { font-size: 22px; }
+.nail-img.empty .st { font-size: 10px; color: var(--sub); }
+body.edit-on .nail-img.empty { cursor: pointer; border-bottom: 2px dashed var(--pink-d); }
+body.edit-on .nail-img.empty .st { color: var(--pink-d); font-weight: 700; }
+.nail-img-ctrl {
+  display: none; position: absolute; top: 6px; right: 6px; gap: 4px;
+}
+body.edit-on .nail-img-ctrl { display: flex; }
+.nail-img-ctrl button {
+  border: none; border-radius: 7px; padding: 4px 8px;
+  font-size: 10px; font-weight: 700; cursor: pointer;
+}
+.btn-chg { background: rgba(0,0,0,0.6); color: #fff; }
+.btn-del { background: rgba(200,40,40,0.8); color: #fff; }
+
+.nail-info { padding: 12px 12px 14px; }
+.nail-type  { font-size: 10px; font-weight: 700; color: var(--sub); margin-bottom: 3px; letter-spacing: .05em; }
+.nail-name  { font-size: 13px; font-weight: 700; margin-bottom: 8px; line-height: 1.35; }
+.nail-prices { display: flex; flex-direction: column; gap: 3px; }
+.nail-price-row {
+  display: flex; justify-content: space-between; align-items: center; font-size: 12px;
+}
+.nail-price-label { color: var(--sub); font-size: 11px; }
+.nail-price-val   { font-size: 14px; font-weight: 700; color: var(--pink-d); }
+.nail-price-foot  { font-size: 12px; font-weight: 600; color: #534AB7; }
+.nail-desc { font-size: 11px; color: var(--sub); margin-bottom: 8px; line-height: 1.5; }
+
+/* ── WHITENING ── */
+.white-box {
+  background: linear-gradient(135deg, #FFF9F0, #FFFDF5);
+  border: 1px solid #FAC775;
+  border-radius: 18px;
+  padding: 20px;
+}
+.white-row { display: flex; gap: 10px; margin-top: 14px; }
+.white-set {
+  flex: 1; background: #fff;
+  border-radius: 12px; padding: 12px;
+  text-align: center; border: 1px solid #FAC775;
+}
+.white-set.featured { border: 2px solid #EF9F27; }
+.white-set .slabel { font-size: 11px; color: #7A4A00; margin-bottom: 4px; }
+.white-set .sprice { font-size: 20px; font-weight: 700; color: var(--pink-d); }
+.white-set .sbadge {
+  display: inline-block; font-size: 10px; color: #7A4A00;
+  background: var(--gold-l); border-radius: 5px; padding: 2px 6px; margin-top: 4px;
+}
+
+/* ── CTA ── */
+.cta {
+  background: linear-gradient(160deg, #FBEAF0, #F4C0D1);
+  padding: 32px 20px;
+  text-align: center;
+}
+.cta h2 { font-size: 19px; font-weight: 700; margin-bottom: 8px; }
+.cta p  { font-size: 12px; color: var(--sub); margin-bottom: 20px; }
+.cta-note { font-size: 11px; color: var(--sub); margin-top: 14px; line-height: 1.8; }
+
+footer {
+  background: var(--text);
+  color: rgba(255,255,255,.65);
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+footer a { color: rgba(255,255,255,.9); }
+footer p + p { margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">✦ モデル会員専用 ✦</div>
+  <p class="hero-name">EIL beauty Honu</p>
+  <h1>モデル<em>専用</em>価格<br>メニュー表</h1>
+  <p class="hero-sub">通常価格より最大25%OFF！会員様限定の特別価格</p>
+  <div class="badge-off">⭐ 会員限定 最大25%OFF</div>
+  <a href="https://lin.ee/VoDLPB7" class="btn-line" target="_blank">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    公式LINEから予約する
+  </a>
+  <div class="warn-box">⚠️ 予約はLINEのみ受け付けております。ホットペッパーからのご予約はお受けできません。</div>
+  <div class="hp-note">サロン詳細・写真は <a href="https://beauty.hotpepper.jp/kr/slnH000551624/" target="_blank">ホットペッパービューティー</a> でもご確認いただけます</div>
+</div>
+
+<!-- ===== HIFU ===== -->
+<div class="divider"></div>
+<div class="sec">
+  <div class="sec-title">
+    <div class="ico" style="background:var(--purple-l);">✨</div>
+    ハイフ（HIFU）
+  </div>
+
+  <!-- 5D vs 普通のハイフ比較 -->
+  <div class="exp-card" style="margin-bottom:10px;">
+    <div style="padding:16px 16px 4px;">
+      <p style="font-size:14px;font-weight:700;margin-bottom:10px;">普通のハイフとの違いは？</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+        <div style="background:#F0EDE9;border-radius:12px;padding:12px;text-align:center;">
+          <p style="font-size:10px;color:var(--sub);font-weight:700;margin-bottom:6px;letter-spacing:.05em;">通常のハイフ</p>
+          <p style="font-size:12px;font-weight:700;margin-bottom:8px;color:var(--text);">1〜2層のみ照射</p>
+          <div style="display:flex;flex-direction:column;gap:4px;text-align:left;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--sub);">
+              <span style="width:8px;height:8px;border-radius:50%;background:#D3D1C7;flex-shrink:0;"></span>表面・真皮層のみ
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--sub);">
+              <span style="width:8px;height:8px;border-radius:50%;background:#D3D1C7;flex-shrink:0;"></span>効果がやや限定的
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--purple-l);border:1.5px solid #CECBF6;border-radius:12px;padding:12px;text-align:center;position:relative;">
+          <div style="position:absolute;top:-8px;left:50%;transform:translateX(-50%);background:var(--pink-d);color:#fff;font-size:9px;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap;">当サロンはこちら</div>
+          <p style="font-size:10px;color:#534AB7;font-weight:700;margin-bottom:6px;letter-spacing:.05em;">5D ハイフ</p>
+          <p style="font-size:12px;font-weight:700;margin-bottom:8px;color:#534AB7;">5層に同時照射</p>
+          <div style="display:flex;flex-direction:column;gap:4px;text-align:left;">
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:#534AB7;">
+              <span style="width:8px;height:8px;border-radius:50%;background:#7F77DD;flex-shrink:0;"></span>表皮〜SMAS筋膜まで
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:#534AB7;">
+              <span style="width:8px;height:8px;border-radius:50%;background:#7F77DD;flex-shrink:0;"></span>より高い引き締め効果
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:#534AB7;">
+              <span style="width:8px;height:8px;border-radius:50%;background:#7F77DD;flex-shrink:0;"></span>脂肪燃焼にもアプローチ
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-head">
+      <div class="exp-ico" style="background:var(--purple-l);">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="16" r="10" fill="#CECBF6" stroke="#7F77DD" stroke-width="1.5"/>
+          <path d="M14 20c1 1.5 7 1.5 8 0" stroke="#534AB7" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="14.5" cy="15" r="1.2" fill="#534AB7"/>
+          <circle cx="21.5" cy="15" r="1.2" fill="#534AB7"/>
+          <path d="M10 28c2-4 14-4 16 0" stroke="#CECBF6" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="exp-title">5Dハイフって何？</div>
+        <div class="exp-sub">メスなし・痛みほぼなし・ダウンタイムなし</div>
+      </div>
+    </div>
+    <div class="illust">
+      <svg width="100%" viewBox="0 0 300 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="18" width="284" height="20" rx="4" fill="#FAEEDA" stroke="#FAC775" stroke-width="1"/>
+        <text x="16" y="31" font-size="10" fill="#854F0B" font-family="sans-serif">表皮（外側）</text>
+        <rect x="8" y="40" width="284" height="24" fill="#FBEAF0" stroke="#F4C0D1" stroke-width="1"/>
+        <text x="16" y="56" font-size="10" fill="#D4537E" font-family="sans-serif">真皮・コラーゲン層</text>
+        <rect x="8" y="66" width="284" height="20" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="1"/>
+        <text x="16" y="79" font-size="10" fill="#0F6E56" font-family="sans-serif">SMAS筋膜（たるみの根本）★ここに集束</text>
+        <rect x="8" y="88" width="284" height="18" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="1"/>
+        <text x="16" y="100" font-size="10" fill="#5F5E5A" font-family="sans-serif">脂肪層</text>
+        <line x1="210" y1="8" x2="210" y2="76" stroke="#7F77DD" stroke-width="2" stroke-dasharray="4 3"/>
+        <line x1="225" y1="8" x2="217" y2="76" stroke="#7F77DD" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <line x1="240" y1="8" x2="224" y2="76" stroke="#7F77DD" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <line x1="195" y1="8" x2="203" y2="76" stroke="#7F77DD" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <line x1="180" y1="8" x2="196" y2="76" stroke="#7F77DD" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <circle cx="210" cy="76" r="5" fill="#D4537E"/>
+        <rect x="182" y="0" width="56" height="12" rx="4" fill="#534AB7"/>
+        <text x="210" y="9" font-size="9" fill="white" text-anchor="middle" font-family="sans-serif">HIFUヘッド</text>
+        <text x="50" y="50" font-size="9" fill="#5F5E5A" font-family="sans-serif">肌表面は</text>
+        <text x="50" y="62" font-size="9" fill="#5F5E5A" font-family="sans-serif">傷つけない✓</text>
+      </svg>
+    </div>
+    <div class="compare-rows">
+      <p class="label">従来施術との比較</p>
+      <div class="cmp-row">
+        <span class="cmp-lbl">メスなし</span>
+        <div class="cmp-track">
+          <div class="cmp-fill" style="width:100%;background:linear-gradient(90deg,#9FE1CB,#1D9E75);">
+            <span style="color:#fff;font-size:11px;font-weight:700;">ハイフ ✓</span>
+          </div>
+        </div>
+      </div>
+      <div class="cmp-row">
+        <span class="cmp-lbl">ダウンタイム</span>
+        <div class="cmp-track"><div class="cmp-fill" style="width:12%;background:linear-gradient(90deg,#CECBF6,#7F77DD);"></div></div>
+        <span class="cmp-val">ほぼなし</span>
+      </div>
+      <div class="cmp-row">
+        <span class="cmp-lbl">効果持続</span>
+        <div class="cmp-track"><div class="cmp-fill" style="width:75%;background:linear-gradient(90deg,#F4C0D1,#D4537E);"></div></div>
+        <span class="cmp-val">3〜6ヶ月</span>
+      </div>
+    </div>
+    <div class="chips">
+      <span class="chip c-pur">📡 5層に同時照射</span>
+      <span class="chip c-pink">🔥 SMAS筋膜を引き締め</span>
+      <span class="chip c-teal">✅ ダウンタイムほぼゼロ</span>
+      <span class="chip c-gold">⚡ 即日効果を実感</span>
+    </div>
+  </div>
+
+  <!-- ハイフ 画像スロット -->
+  <div class="nail-img empty" id="img-hifu" style="border-radius:14px;margin-bottom:14px;aspect-ratio:16/9;" onclick="editSlot('img-hifu')">
+    <span class="si">✨</span><span class="st">ハイフ施術・ビフォーアフターを追加</span>
+    <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('img-hifu')">変更</button><button class="btn-del" onclick="delSlot('img-hifu',event)">削除</button></div>
+  </div>
+
+  <div class="price-card">
+    <div class="price-head">フェイシャル HIFU</div>
+    <div class="price-row">
+      <div class="pname">5Dハイフ 5000shot<span class="tag tag-new">初回</span></div>
+      <div class="pcol"><div class="pold">¥9,800</div><div class="pnew">¥7,350</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">5Dハイフ 10000shot<span class="tag tag-new">初回</span></div>
+      <div class="pcol"><div class="pold">¥14,800</div><div class="pnew">¥11,100</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">小顔★5Dハイフ 5000shot<span class="tag tag-pop">人気</span></div>
+      <div class="pcol"><div class="pnew">¥8,850</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">小顔★5Dハイフ 10000shot<span class="tag tag-pop">No.1</span></div>
+      <div class="pcol"><div class="pnew">¥12,600</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">5Dハイフ＋炭酸パック 5000shot</div>
+      <div class="pcol"><div class="pnew">¥9,300</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">5Dハイフ＋炭酸パック 10000shot</div>
+      <div class="pcol"><div class="pnew">¥13,350</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">5回コース 5000shot（ラジオ波付）</div>
+      <div class="pcol"><div class="pold">¥49,800</div><div class="pnew">¥37,350</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">5回コース 10000shot（ラジオ波付）</div>
+      <div class="pcol"><div class="pold">¥69,800</div><div class="pnew">¥52,350</div></div>
+    </div>
+  </div>
+
+  <p style="font-size:13px;font-weight:700;margin:4px 0 10px;">気になる部位を集中ケア！ボディ HIFU</p>
+  <div class="body-grid">
+    <div class="body-card">
+      <h4>🦵 太もも / 裏もも</h4>
+      <div class="from">5000shot〜</div>
+      <div class="price">¥8,850</div>
+      <div class="orig">通常 ¥11,800</div>
+    </div>
+    <div class="body-card">
+      <h4>🍑 美尻・ヒップアップ</h4>
+      <div class="from">5000shot〜</div>
+      <div class="price">¥8,850</div>
+      <div class="orig">通常 ¥11,800</div>
+    </div>
+    <div class="body-card">
+      <h4>💪 二の腕</h4>
+      <div class="from">5000shot〜</div>
+      <div class="price">¥8,850</div>
+      <div class="orig">通常 ¥11,800</div>
+    </div>
+    <div class="body-card">
+      <h4>🫁 下腹部</h4>
+      <div class="from">5000shot〜</div>
+      <div class="price">¥8,850</div>
+      <div class="orig">通常 ¥11,800</div>
+    </div>
+  </div>
+  <div class="price-card">
+    <div class="price-head">🌟 セット割引</div>
+    <div class="price-row">
+      <div class="pname">小顔(5000)＋美脚(5000)</div>
+      <div class="pcol"><div class="pold">¥24,800</div><div class="pnew">¥18,600</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">小顔(5000)＋美尻(5000)</div>
+      <div class="pcol"><div class="pold">¥24,800</div><div class="pnew">¥18,600</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AIRBARI ===== -->
+<div class="divider"></div>
+<div class="sec">
+  <div class="sec-title">
+    <div class="ico" style="background:var(--teal-l);">💨</div>
+    エアバリ
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-head">
+      <div class="exp-ico" style="background:var(--teal-l);">
+        <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="12" fill="#9FE1CB" stroke="#1D9E75" stroke-width="1.5"/>
+          <!-- 空気圧の波 -->
+          <path d="M10 18 Q13 14 16 18 Q19 22 22 18 Q25 14 28 18" stroke="#0F6E56" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="18" cy="18" r="2.5" fill="#0F6E56"/>
+        </svg>
+      </div>
+      <div>
+        <div class="exp-title">エアバリって何？</div>
+        <div class="exp-sub">鍼を刺さずに鍼と同じ効果！空気圧の力</div>
+      </div>
+    </div>
+
+    <!-- 仕組みイラスト -->
+    <div class="illust">
+      <svg width="100%" viewBox="0 0 300 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- 顔シルエット -->
+        <ellipse cx="150" cy="82" rx="52" ry="60" fill="#FBEAF0" stroke="#F4C0D1" stroke-width="1.5"/>
+        <ellipse cx="134" cy="68" rx="6.5" ry="4" fill="white" stroke="#F4C0D1" stroke-width="1"/>
+        <circle cx="135" cy="68" r="2.2" fill="#2C2C2A"/>
+        <ellipse cx="166" cy="68" rx="6.5" ry="4" fill="white" stroke="#F4C0D1" stroke-width="1"/>
+        <circle cx="167" cy="68" r="2.2" fill="#2C2C2A"/>
+        <path d="M146 81 Q150 87 154 81" stroke="#B4B2A9" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M141 99 Q150 106 159 99" stroke="#D4537E" stroke-width="1.5" stroke-linecap="round"/>
+
+        <!-- 空気圧ノズル（鍼なし） -->
+        <rect x="192" y="44" width="22" height="34" rx="5" fill="#9FE1CB" stroke="#1D9E75" stroke-width="1.5"/>
+        <rect x="200" y="38" width="6" height="10" rx="2" fill="#1D9E75"/>
+        <text x="203" y="93" font-size="8" fill="#0F6E56" text-anchor="middle" font-family="sans-serif">空気圧</text>
+        <text x="203" y="102" font-size="8" fill="#0F6E56" text-anchor="middle" font-family="sans-serif">ノズル</text>
+
+        <!-- 空気圧の波紋（肌に当たる） -->
+        <path d="M192 61 Q185 58 180 63 Q175 68 180 73 Q185 76 192 73" stroke="#1D9E75" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/>
+        <path d="M192 61 Q182 55 174 62 Q168 70 174 77 Q182 82 192 73" stroke="#9FE1CB" stroke-width="1" fill="none" stroke-dasharray="3 2"/>
+
+        <!-- 美容液浸透イメージ -->
+        <text x="88" y="46" font-size="9" fill="#534AB7" font-family="sans-serif" font-weight="bold">美容液</text>
+        <circle cx="108" cy="55" r="3" fill="#CECBF6" opacity=".9"/>
+        <circle cx="116" cy="62" r="2.5" fill="#CECBF6" opacity=".8"/>
+        <circle cx="122" cy="70" r="2" fill="#CECBF6" opacity=".7"/>
+        <circle cx="126" cy="78" r="1.5" fill="#CECBF6" opacity=".6"/>
+        <path d="M110 48 L124 76" stroke="#CECBF6" stroke-width="1" stroke-dasharray="2 2"/>
+        <text x="72" y="56" font-size="8" fill="#534AB7" font-family="sans-serif">肌の奥まで</text>
+        <text x="72" y="66" font-size="8" fill="#534AB7" font-family="sans-serif">浸透↓</text>
+
+        <!-- 効果ラベル -->
+        <rect x="18" y="116" width="62" height="20" rx="6" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="1"/>
+        <text x="49" y="130" font-size="9" fill="#0F6E56" text-anchor="middle" font-family="sans-serif">ツボ刺激</text>
+        <rect x="88" y="116" width="62" height="20" rx="6" fill="#EEEDFE" stroke="#CECBF6" stroke-width="1"/>
+        <text x="119" y="130" font-size="9" fill="#534AB7" text-anchor="middle" font-family="sans-serif">美容液浸透</text>
+        <rect x="158" y="116" width="62" height="20" rx="6" fill="#FBEAF0" stroke="#F4C0D1" stroke-width="1"/>
+        <text x="189" y="130" font-size="9" fill="#D4537E" text-anchor="middle" font-family="sans-serif">リフトアップ</text>
+        <rect x="228" y="116" width="62" height="20" rx="6" fill="#FAEEDA" stroke="#FAC775" stroke-width="1"/>
+        <text x="259" y="130" font-size="9" fill="#854F0B" text-anchor="middle" font-family="sans-serif">透明感UP</text>
+      </svg>
+    </div>
+
+    <!-- ポイント解説 -->
+    <div class="steps">
+      <div class="step">
+        <div class="step-n s1">1</div>
+        <div class="step-body">
+          <h4>鍼を刺さない！空気圧で鍼と同じ効果</h4>
+          <p>高圧の空気をツボに当てるだけ。痛みゼロで鍼と同等の刺激を実現</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n s2">2</div>
+        <div class="step-body">
+          <h4>美容液を肌の奥深くまで浸透</h4>
+          <p>空気圧の力で有効成分をグッと押し込む。通常のケアより格段に浸透率UP</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-n s3">3</div>
+        <div class="step-body">
+          <h4>撮影前日に◎　即効リフトアップ</h4>
+          <p>ツボを刺激して顔のむくみを解消。ほうれい線が気になる方にも人気</p>
+        </div>
+      </div>
+    </div>
+    <div class="chips">
+      <span class="chip c-teal">💨 鍼を刺さない！</span>
+      <span class="chip c-pur">✨ 美容液が奥まで届く</span>
+      <span class="chip c-pink">📸 撮影前日におすすめ</span>
+      <span class="chip c-gold">🎯 ツボ刺激でリフトアップ</span>
+    </div>
+  </div>
+
+  <!-- エアバリ 画像スロット -->
+  <div class="nail-img empty" id="img-airbari" style="border-radius:14px;margin-bottom:14px;aspect-ratio:16/9;" onclick="editSlot('img-airbari')">
+    <span class="si">💆</span><span class="st">エアバリ施術・ビフォーアフターを追加</span>
+    <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('img-airbari')">変更</button><button class="btn-del" onclick="delSlot('img-airbari',event)">削除</button></div>
+  </div>
+
+  <div class="price-card">
+    <div class="price-head">エアバリ 単品・セット</div>
+    <div class="price-row">
+      <div class="pname">エアバリ（美容鍼＋EMS）</div>
+      <div class="pcol"><div class="pnew">¥3,675</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">ハイドラ＋エアバリ<span class="tag tag-pop">人気</span></div>
+      <div class="pcol"><div class="pnew">¥7,425</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">ハイドラ＋エアバリ＋導入美容液</div>
+      <div class="pcol"><div class="pnew">¥8,475</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">ハイドラ＋エアバリ＋保湿シートマスク</div>
+      <div class="pcol"><div class="pnew">¥8,475</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FACIAL ===== -->
+<div class="divider"></div>
+<div class="sec">
+  <div class="sec-title">
+    <div class="ico" style="background:var(--pink-l);">💧</div>
+    フェイシャルメニュー
+  </div>
+  <div class="price-card">
+    <div class="price-head">単品</div>
+    <div class="price-row">
+      <div class="pname">ハイドラフェイシャル</div>
+      <div class="pcol"><div class="pnew">¥3,675</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">エアバリ（美容鍼＋EMS）</div>
+      <div class="pcol"><div class="pnew">¥3,675</div></div>
+    </div>
+  </div>
+  <div class="price-card">
+    <div class="price-head">クーポンセット</div>
+    <div class="price-row">
+      <div class="pname">ハイドラ＋鼻パック</div>
+      <div class="pcol"><div class="pnew">¥5,025</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">ハイドラ＋ダイヤモンドピーリング</div>
+      <div class="pcol"><div class="pnew">¥7,725</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">ハイドラ＋鼻パック＋ダイヤモンドピーリング</div>
+      <div class="pcol"><div class="pnew">¥8,700</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHITENING ===== -->
+<div class="divider"></div>
+<div class="sec">
+  <div class="sec-title">
+    <div class="ico" style="background:var(--gold-l);">🦷</div>
+    セルフホワイトニング
+  </div>
+  <div class="white-box">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <svg width="56" height="56" viewBox="0 0 64 64" fill="none">
+        <rect x="8" y="12" width="15" height="22" rx="4" fill="white" stroke="#FAC775" stroke-width="2"/>
+        <rect x="25" y="12" width="14" height="26" rx="4" fill="white" stroke="#FAC775" stroke-width="2"/>
+        <rect x="41" y="12" width="15" height="22" rx="4" fill="white" stroke="#FAC775" stroke-width="2"/>
+        <path d="M10 46 Q32 54 54 46" stroke="#EF9F27" stroke-width="2" stroke-linecap="round"/>
+        <line x1="19" y1="6" x2="17" y2="2" stroke="#EF9F27" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="32" y1="5" x2="32" y2="1" stroke="#EF9F27" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="45" y1="6" x2="47" y2="2" stroke="#EF9F27" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <p style="font-size:15px;font-weight:700;margin-bottom:2px;">LED光照射ホワイトニング</p>
+        <p style="font-size:12px;color:var(--sub);">痛くない・自分でできる</p>
+      </div>
+    </div>
+    <div class="white-row">
+      <div class="white-set">
+        <p class="slabel">1セット（8分）</p>
+        <p class="sprice">¥2,000</p>
+      </div>
+      <div class="white-set featured">
+        <p class="slabel">2セット（16分）</p>
+        <p class="sprice">¥3,500</p>
+        <span class="sbadge">500円お得！</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ホワイトニング 画像スロット -->
+  <div class="nail-img empty" id="img-whitening" style="border-radius:14px;margin-bottom:4px;aspect-ratio:16/9;" onclick="editSlot('img-whitening')">
+    <span class="si">🦷</span><span class="st">ホワイトニング施術・ビフォーアフターを追加</span>
+    <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('img-whitening')">変更</button><button class="btn-del" onclick="delSlot('img-whitening',event)">削除</button></div>
+  </div>
+</div>
+
+<!-- ===== NAIL ===== -->
+<div class="divider"></div>
+<div class="sec">
+  <div class="sec-title">
+    <div class="ico" style="background:var(--pink-l);">💅</div>
+    ネイルメニュー
+  </div>
+  <p style="font-size:12px;color:var(--sub);margin-bottom:14px;">フットは全メニューハンド価格＋¥500</p>
+
+  <div class="nail-grid">
+
+    <!-- 1 ワンカラー ★画像あり -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n1" onclick="editSlot('n1')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n1')">変更</button><button class="btn-del" onclick="delSlot('n1',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">ベーシック</div>
+        <div class="nail-name">ワンカラー</div>
+        <div class="nail-desc">シンプルな単色仕上げ</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥3,300</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥3,800</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 キャンペーンネイル ★画像あり -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n2" onclick="editSlot('n2')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n2')">変更</button><button class="btn-del" onclick="delSlot('n2',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">キャンペーン</div>
+        <div class="nail-name">キャンペーンネイル</div>
+        <div class="nail-desc">お得なキャンペーン限定デザイン</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥3,675</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,175</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 カラーグラデーション -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n8" onclick="editSlot('n8')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n8')">変更</button><button class="btn-del" onclick="delSlot('n8',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">グラデーション</div>
+        <div class="nail-name">カラーグラデーション</div>
+        <div class="nail-desc">色が自然に溶け合うグラデ（ラメグラも選べる）</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥3,675</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,175</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- フレンチネイル -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n17" onclick="editSlot('n17')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n17')">変更</button><button class="btn-del" onclick="delSlot('n17',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">フレンチ</div>
+        <div class="nail-name">フレンチネイル</div>
+        <div class="nail-desc">清潔感あふれる定番フレンチ</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥4,050</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,550</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 マグネット -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n9" onclick="editSlot('n9')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n9')">変更</button><button class="btn-del" onclick="delSlot('n9',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">スペシャル</div>
+        <div class="nail-name">マグネット</div>
+        <div class="nail-desc">磁力で生まれる立体的な波模様</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥4,425</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,925</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 オーロラ -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n10" onclick="editSlot('n10')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n10')">変更</button><button class="btn-del" onclick="delSlot('n10',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">スペシャル</div>
+        <div class="nail-name">オーロラ</div>
+        <div class="nail-desc">光の角度で変わる幻想的な輝き</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥4,425</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,925</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 シンプルアート -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n11" onclick="editSlot('n11')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n11')">変更</button><button class="btn-del" onclick="delSlot('n11',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">アート</div>
+        <div class="nail-name">シンプルアート</div>
+        <div class="nail-desc">ワンカラー＋アート2本付き</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥3,675</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,175</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 トレンドアート -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n12" onclick="editSlot('n12')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n12')">変更</button><button class="btn-del" onclick="delSlot('n12',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">アート</div>
+        <div class="nail-name">トレンドアート</div>
+        <div class="nail-desc">大きな可愛いパーツから2つお選び頂けます！</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥4,050</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,550</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 54定額 ★画像あり -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n3" onclick="editSlot('n3')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n3')">変更</button><button class="btn-del" onclick="delSlot('n3',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">定額</div>
+        <div class="nail-name">54定額ネイル</div>
+        <div class="nail-desc">54種類から選べる定額デザイン</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥4,050</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,550</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 季節限定 ★画像あり -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n4" onclick="editSlot('n4')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n4')">変更</button><button class="btn-del" onclick="delSlot('n4',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">季節限定</div>
+        <div class="nail-name">季節限定ネイル</div>
+        <div class="nail-desc">旬の季節感あふれる限定デザイン</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥4,425</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥4,925</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 64定額 ★画像あり -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n5" onclick="editSlot('n5')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n5')">変更</button><button class="btn-del" onclick="delSlot('n5',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">定額</div>
+        <div class="nail-name">64定額ネイル</div>
+        <div class="nail-desc">64種類から選べる豊富なデザイン</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥4,800</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥5,300</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 69定額 ★画像あり -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n6" onclick="editSlot('n6')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n6')">変更</button><button class="btn-del" onclick="delSlot('n6',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">定額</div>
+        <div class="nail-name">69定額ネイル</div>
+        <div class="nail-desc">69種類から選べるこだわりデザイン</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥5,175</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥5,675</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 持ち込み4本 -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n13" onclick="editSlot('n13')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n13')">変更</button><button class="btn-del" onclick="delSlot('n13',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">持ち込み</div>
+        <div class="nail-name">持ち込みデザイン 4本</div>
+        <div class="nail-desc">お気に入り画像を持ち込んで再現</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥4,875</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥5,375</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 持ち込み6本 -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n14" onclick="editSlot('n14')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n14')">変更</button><button class="btn-del" onclick="delSlot('n14',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">持ち込み</div>
+        <div class="nail-name">持ち込みデザイン 6本</div>
+        <div class="nail-desc">お気に入り画像を持ち込んで再現</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥5,350</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥5,850</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 持ち込み10本 -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n15" onclick="editSlot('n15')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n15')">変更</button><button class="btn-del" onclick="delSlot('n15',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">持ち込み</div>
+        <div class="nail-name">持ち込みデザイン 10本</div>
+        <div class="nail-desc">全部持ち込みデザインで統一</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥6,000</span></div>
+          <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-foot">¥6,500</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- スカルプ10本+ワンカラー -->
+    <div class="nail-card">
+      <div class="nail-img empty" id="n16" onclick="editSlot('n16')">
+        <span class="si">💅</span><span class="st">写真を追加</span>
+        <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n16')">変更</button><button class="btn-del" onclick="delSlot('n16',event)">削除</button></div>
+      </div>
+      <div class="nail-info">
+        <div class="nail-type">スカルプ</div>
+        <div class="nail-name">スカルプ 10本＋ワンカラー</div>
+        <div class="nail-desc">長さ出し＋ワンカラーで仕上げ</div>
+        <div class="nail-prices">
+          <div class="nail-price-row"><span class="nail-price-label">ハンド</span><span class="nail-price-val">¥7,800</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- フット 親指アート ★画像あり（1枚横幅いっぱい） -->
+  <div class="nail-card" style="margin-bottom:12px;">
+    <div class="nail-img empty" id="n7" onclick="editSlot('n7')" style="aspect-ratio:2/1;">
+      <span class="si">🦶</span><span class="st">フット親指アートの写真を追加</span>
+      <div class="nail-img-ctrl"><button class="btn-chg" onclick="editSlot('n7')">変更</button><button class="btn-del" onclick="delSlot('n7',event)">削除</button></div>
+    </div>
+    <div class="nail-info">
+      <div class="nail-type">フット限定</div>
+      <div class="nail-name">フット 選べる親指アート＋ワンカラー</div>
+      <div class="nail-desc">親指だけワンポイントアートが選べる</div>
+      <div class="nail-prices">
+        <div class="nail-price-row"><span class="nail-price-label">フット</span><span class="nail-price-val">¥4,050</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- オプション -->
+  <div class="price-card" style="margin-top:4px;">
+    <div class="price-head">オプション</div>
+    <div class="price-row">
+      <div class="pname">亀裂補強</div>
+      <div class="pcol"><div class="pnew">¥500 / 1本</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">スカルプ（長さ出し）</div>
+      <div class="pcol"><div class="pnew">¥600 / 1本</div></div>
+    </div>
+  </div>
+
+  <!-- オフ・ケア -->
+  <div class="price-card" style="margin-top:4px;">
+    <div class="price-head">オフ・ケア</div>
+    <div class="price-row">
+      <div class="pname">付け替えオフ（再来・自店・1ヶ月以内）</div>
+      <div class="pcol"><div class="pfree">無料</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">付け替えオフ（再来・1ヶ月以上）</div>
+      <div class="pcol"><div class="pnew">¥500</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">他店付け替えオフ</div>
+      <div class="pcol"><div class="pnew">¥1,000</div></div>
+    </div>
+    <div class="price-row">
+      <div class="pname">ジェルオフのみ（自店）</div>
+      <div class="pcol"><div class="pnew">¥2,250</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>まずは予約してみよう！</h2>
+  <p>公式LINEから簡単予約📩<br>メンバーズカード持参でオフ無料特典あり</p>
+  <a href="https://lin.ee/VoDLPB7" class="btn-line" target="_blank" style="max-width:320px;margin:0 auto;">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    公式LINEから予約する
+  </a>
+  <div class="warn-box" style="max-width:320px;margin:10px auto 0;text-align:left;">⚠️ ホットペッパーからの予約は受け付けておりません。必ずLINEよりご予約ください。</div>
+  <p class="cta-note">※会員価格はEIL beauty Honu モデル会員様限定<br>※価格は税込表示</p>
+</div>
+
+<footer>
+  <p style="font-weight:700;font-size:15px;margin-bottom:6px;">EIL beauty Honu</p>
+  <p style="font-size:13px;margin-bottom:4px;">📍 大阪府大阪市北区太融寺町８－１０　梅田高速ビル８Ｆ</p>
+  <p style="font-size:13px;margin-bottom:4px;">📞 <a href="tel:0677771065" style="color:inherit;">06-7777-1065</a></p>
+  <div style="background:rgba(255,255,255,0.08);border-radius:10px;padding:12px 14px;margin:10px 0;text-align:left;font-size:12px;line-height:1.7;color:rgba(255,255,255,0.85);">
+    🚶 【東梅田駅から徒歩3分♪】ホワイティうめだ・泉の広場から《M14》出口を出るとセブンイレブンがあります。セブンイレブンを正面に右方向に進むと、左手に《梅田高速ビル》があります。そちらのビルの8Fになります♪<br>わからない場合はお気軽に店舗にご連絡ください！
+  </div>
+  <p style="margin-top:10px;"><a href="https://beauty.hotpepper.jp/kr/slnH000551624/" target="_blank">サロン詳細はホットペッパービューティーで →</a></p>
+  <p><a href="https://lin.ee/VoDLPB7" target="_blank">公式LINE予約 →</a></p>
+  <p style="font-size:11px;margin-top:10px;opacity:0.6;">EIL beauty Honu｜モデル会員専用メニュー</p>
+</footer>
+
+<!-- 編集ボタン -->
+<div class="edit-bar">
+  <button class="edit-btn" id="editBtn" onclick="toggleEdit()">✏️ 画像を編集する</button>
+  <button class="edit-btn" id="exportBtn" onclick="exportForCustomer()" style="background:linear-gradient(135deg,#1D9E75,#0f7a5a);margin-top:8px;">📤 お客様用を書き出す</button>
+</div>
+
+<input type="file" id="imgInput" accept="image/*" style="display:none" onchange="onImgSelected(event)">
+
+<script>
+var cur = null;
+var IDS = ['n1','n2','n3','n4','n5','n6','n7','n8','n9','n10','n11','n12','n13','n14','n15','n16','n17','img-hifu','img-airbari','img-whitening'];
+
+window.addEventListener('load', function() {
+  IDS.forEach(function(id) {
+    var s = localStorage.getItem('img_' + id);
+    if (s) applyImg(id, s);
+  });
+});
+
+function toggleEdit() {
+  var on = document.body.classList.toggle('edit-on');
+  var btn = document.getElementById('editBtn');
+  btn.textContent = on ? '✅ 編集を終了する' : '✏️ 画像を編集する';
+  btn.className = 'edit-btn' + (on ? ' on' : '');
+}
+
+function editSlot(id) {
+  if (!document.body.classList.contains('edit-on')) return;
+  cur = id;
+  document.getElementById('imgInput').click();
+}
+
+function onImgSelected(e) {
+  var f = e.target.files[0];
+  if (!f || !cur) return;
+  var r = new FileReader();
+  r.onload = function(ev) {
+    applyImg(cur, ev.target.result);
+    localStorage.setItem('img_' + cur, ev.target.result);
+  };
+  r.readAsDataURL(f);
+  e.target.value = '';
+}
+
+function applyImg(id, src) {
+  var slot = document.getElementById(id);
+  if (!slot) return;
+  slot.classList.remove('empty');
+  var img = slot.querySelector('img');
+  if (!img) {
+    img = document.createElement('img');
+    slot.insertBefore(img, slot.firstChild);
+  }
+  img.src = src;
+  slot.querySelectorAll('.si,.st').forEach(function(el){ el.style.display='none'; });
+}
+
+function delSlot(id, e) {
+  e.stopPropagation();
+  var slot = document.getElementById(id);
+  if (!slot) return;
+  var img = slot.querySelector('img');
+  if (img) img.remove();
+  slot.classList.add('empty');
+  slot.querySelectorAll('.si,.st').forEach(function(el){ el.style.display=''; });
+  localStorage.removeItem('img_' + id);
+}
+
+function exportForCustomer() {
+  // まず全画像をDOMに反映
+  IDS.forEach(function(id) {
+    var s = localStorage.getItem('img_' + id);
+    if (s) applyImg(id, s);
+  });
+
+  // 現在のHTMLを取得してedit-bar・imgInput・script全体を除去
+  var html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+
+  // edit-bar を削除
+  html = html.replace(/<!-- 編集ボタン -->[\s\S]*?<\/div>\s*\n/, '');
+  // imgInput を削除
+  html = html.replace(/<input[^>]*id="imgInput"[^>]*>\s*\n/, '');
+  // script タグ全体を削除
+  html = html.replace(/<script>[\s\S]*?<\/script>\s*\n?/, '');
+  // edit-on 系CSSを無効化（body.edit-on ルールを空に）
+  html = html.replace(/body\.edit-on[^{]*\{[^}]*\}/g, '');
+
+  var blob = new Blob([html], {type: 'text/html;charset=utf-8'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'EIL-beauty-Honu-menu.html';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+</script>
+</body>
+</html>
